@@ -2575,3 +2575,400 @@ body.video-modal-open {
     justify-content: center;
   }
 }
+.access-page-body,
+.admin-page {
+  min-height: 100vh;
+}
+
+.access-page {
+  min-height: calc(100vh - 78px);
+  padding: 54px 0 80px;
+}
+
+.access-container {
+  max-width: 1050px;
+}
+
+.access-container h1 {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1.02;
+  letter-spacing: -0.05em;
+  margin-bottom: 16px;
+}
+
+.access-card,
+.download-card,
+.admin-card {
+  width: min(100%, 760px);
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 28px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.065), rgba(255,255,255,0.028)),
+    rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(12px);
+}
+
+.access-card h2,
+.download-card h2,
+.admin-card h2 {
+  font-size: clamp(1.45rem, 3vw, 2.1rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: 10px;
+}
+
+.access-muted {
+  color: var(--text-soft);
+  margin-bottom: 22px;
+}
+
+.access-form {
+  display: grid;
+  gap: 12px;
+}
+
+.access-form label,
+.copy-message-wrap label {
+  color: #e2e8f0;
+  font-weight: 800;
+  font-size: 0.94rem;
+}
+
+.access-input {
+  width: 100%;
+  min-height: 52px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.09);
+  background: rgba(255,255,255,0.045);
+  color: #fff;
+  padding: 14px 16px;
+  font: inherit;
+  outline: none;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.access-input:focus {
+  border-color: rgba(96, 165, 250, 0.75);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.18);
+  background: rgba(255,255,255,0.065);
+}
+
+.access-input::placeholder {
+  color: rgba(203, 213, 225, 0.62);
+}
+
+.access-button,
+.access-secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 14px 22px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-weight: 900;
+  color: #fff;
+  background: linear-gradient(135deg, var(--primary), var(--primary-hover));
+  box-shadow: 0 16px 34px rgba(37, 99, 235, 0.28);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
+}
+
+.access-button:hover,
+.access-secondary-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px rgba(37, 99, 235, 0.34);
+}
+
+.access-button:disabled,
+.access-secondary-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.access-button.success {
+  background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+  box-shadow: 0 16px 34px rgba(34, 197, 94, 0.22);
+}
+
+.access-button.danger {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  box-shadow: 0 16px 34px rgba(239, 68, 68, 0.22);
+}
+
+.status-message {
+  min-height: 22px;
+  color: var(--text-muted);
+  font-weight: 700;
+  font-size: 0.94rem;
+}
+
+.status-message.success {
+  color: #86efac;
+}
+
+.status-message.error {
+  color: #fca5a5;
+}
+
+.status-message.info {
+  color: #bfdbfe;
+}
+
+.download-zone {
+  display: grid;
+  gap: 20px;
+}
+
+.download-card {
+  width: min(100%, 900px);
+}
+
+.verified-card {
+  text-align: center;
+  background:
+    linear-gradient(180deg, rgba(34,197,94,0.13), rgba(255,255,255,0.035)),
+    rgba(255,255,255,0.02);
+  border-color: rgba(34,197,94,0.20);
+}
+
+.verified-card p {
+  color: var(--text-soft);
+}
+
+.download-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin: 26px 0 14px;
+}
+
+.download-buttons .cta-button,
+.download-buttons .secondary-button,
+.download-buttons .cta-button-secondary {
+  min-width: 210px;
+}
+
+.install-steps ol,
+.security-note ul {
+  display: grid;
+  gap: 12px;
+  margin-top: 14px;
+  padding-left: 22px;
+  color: var(--text-soft);
+}
+
+.install-steps ol {
+  list-style: decimal;
+}
+
+.security-note ul {
+  list-style: disc;
+}
+
+.security-note,
+.honest-note {
+  border-color: rgba(245, 158, 11, 0.25);
+  background:
+    linear-gradient(180deg, rgba(245,158,11,0.10), rgba(255,255,255,0.025)),
+    rgba(255,255,255,0.02);
+}
+
+.security-note strong,
+.honest-note strong {
+  color: #fde68a;
+}
+
+.security-note p,
+.honest-note p {
+  color: var(--text-soft);
+}
+
+.text-link-button {
+  border: none;
+  background: transparent;
+  color: #93c5fd;
+  cursor: pointer;
+  font-weight: 800;
+  margin-top: 8px;
+}
+
+.text-link-button:hover {
+  color: #bfdbfe;
+}
+
+.admin-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  align-items: start;
+}
+
+.admin-grid .admin-card {
+  width: 100%;
+}
+
+.copy-message-wrap {
+  display: grid;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.copy-message {
+  min-height: 190px;
+  resize: vertical;
+}
+
+.buyer-result {
+  margin-top: 20px;
+  display: grid;
+  gap: 10px;
+}
+
+.result-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.result-row span {
+  color: var(--text-muted);
+  font-weight: 700;
+}
+
+.result-row strong {
+  color: #fff;
+  text-align: right;
+  word-break: break-word;
+}
+
+.admin-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.admin-actions .access-button {
+  flex: 1;
+  min-width: 150px;
+}
+
+@media (max-width: 900px) {
+  .admin-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .access-page {
+    padding: 38px 0 58px;
+  }
+
+  .access-card,
+  .download-card,
+  .admin-card {
+    padding: 22px;
+    border-radius: 22px;
+  }
+
+  .download-buttons,
+  .admin-actions {
+    flex-direction: column;
+  }
+
+  .download-buttons .cta-button,
+  .download-buttons .secondary-button,
+  .download-buttons .cta-button-secondary,
+  .access-button,
+  .access-secondary-button {
+    width: 100%;
+  }
+
+  .result-row {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .result-row strong {
+    text-align: left;
+  }
+}
+.download-zone.is-hidden {
+  display: none !important;
+}
+
+.download-zone.is-visible {
+  display: grid !important;
+}
+
+a.is-disabled {
+  pointer-events: none;
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+/* =========================================================
+   FIX SEGURIDAD VISUAL ADMIN
+   Fuerza que los elementos hidden nunca se muestren por CSS.
+   ========================================================= */
+
+[hidden] {
+  display: none !important;
+}
+
+#admin-panel.admin-locked {
+  display: none !important;
+}
+
+#admin-lock.admin-hidden {
+  display: none !important;
+}
+.warning-box {
+  margin: 18px 0;
+  padding: 16px 18px;
+  border-radius: 16px;
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.28);
+  color: var(--text-soft);
+}
+
+.warning-box strong {
+  display: block;
+  color: #fde68a;
+  margin-bottom: 10px;
+}
+
+.warning-box ul {
+  display: grid;
+  gap: 8px;
+  padding-left: 18px;
+  list-style: disc;
+}
+
+.simple-steps {
+  display: grid;
+  gap: 12px;
+  margin-top: 14px;
+  padding-left: 22px;
+}
+
+.simple-steps li {
+  color: var(--text-soft);
+  padding-left: 4px;
+}
+
+.security-note h3 {
+  margin-top: 18px;
+  margin-bottom: 8px;
+  font-size: 1.05rem;
+  color: #ffffff;
+}

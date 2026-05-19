@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin compradores | ClipMind AI</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="./img/favicon.png" />
+</head>
+<body class="admin-page" data-page="admin">
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="/" class="logo" aria-label="ClipMind AI inicio">
+        <span class="logo-mark">CM</span>
+        <span class="logo-text">ClipMind AI</span>
+      </a>
+      <a href="/instalador.html" class="secondary-button cta-button-header">Acceso compradores</a>
+    </div>
+  </header>
+
+  <main class="access-page">
+    <section class="container access-container">
+      <div class="section-heading center">
+        <p class="section-tag">Panel interno</p>
+        <h1>Admin de compradores ClipMind AI</h1>
+        <p>Registra correos de compradores de Hotmart y administra accesos de descarga.</p>
+      </div>
+
+      <article id="admin-lock" class="access-card admin-card">
+        <h2>Ingresar al panel</h2>
+        <p class="access-muted">Protección básica temporal. No reemplaza un login real.</p>
+
+        <div class="access-form">
+          <label for="admin-email">Correo admin</label>
+<input 
+  id="admin-email" 
+  class="access-input" 
+  type="email" 
+  placeholder="tu-correo-admin@email.com" 
+  autocomplete="email" 
+/>
+
+<label for="admin-password">Contraseña admin</label>
+<input 
+  id="admin-password" 
+  class="access-input" 
+  type="password" 
+  placeholder="Ingresa tu contraseña" 
+  autocomplete="current-password" 
+/>
+
+<button id="unlock-admin-btn" class="access-button" type="button">
+  Entrar al panel
+</button>
+<p id="admin-lock-message" class="status-message" aria-live="polite"></p>
+        </div>
+      </article>
+
+<div id="admin-panel" class="admin-grid admin-locked" hidden>
+          <div class="access-card admin-card admin-session-card">
+  <h2>Sesión admin</h2>
+  <p class="access-muted">
+    Has iniciado sesión como administrador.
+  </p>
+  <button id="admin-logout-btn" class="secondary-button access-secondary-button" type="button">
+    Cerrar sesión
+  </button>
+</div>
+        <article class="access-card admin-card">
+          <h2>Registrar comprador</h2>
+          <p class="access-muted">Guarda el correo en minúsculas, activa el acceso y marca origen como Hotmart.</p>
+
+          <form id="buyer-form" class="access-form">
+            <label for="buyer-email">Correo del comprador</label>
+            <input id="buyer-email" class="access-input" type="email" placeholder="comprador@email.com" autocomplete="email" required />
+            <button id="save-buyer-btn" class="access-button" type="submit">Guardar comprador</button>
+            <p id="buyer-status" class="status-message" aria-live="polite"></p>
+          </form>
+
+         <div class="copy-message-wrap">
+  <label for="buyer-copy-message">Mensaje del correo</label>
+
+  <textarea 
+    id="buyer-copy-message" 
+    class="access-input copy-message" 
+    rows="9" 
+    placeholder="Aquí aparecerá el mensaje luego de registrar el comprador. Puedes editarlo antes de enviarlo."
+  ></textarea>
+
+  <button id="send-buyer-email-btn" class="secondary-button access-secondary-button" type="button">
+    Enviar mail
+  </button>
+
+  <p class="access-muted">
+    Se abrirá Gmail con el correo listo. Solo revisa y presiona Enviar.
+  </p>
+</div>
+        </article>
+
+        <article class="access-card admin-card">
+          <h2>Buscar y administrar acceso</h2>
+          <p class="access-muted">Consulta si existe, revisa estado y activa/desactiva el acceso.</p>
+
+          <form id="search-form" class="access-form">
+            <label for="search-email">Correo a buscar</label>
+            <input id="search-email" class="access-input" type="email" placeholder="comprador@email.com" autocomplete="email" required />
+            <button id="search-buyer-btn" class="access-button" type="submit">Buscar comprador</button>
+            <p id="search-status" class="status-message" aria-live="polite"></p>
+          </form>
+
+          <div id="buyer-result" class="buyer-result" hidden>
+            <div class="result-row"><span>Email</span><strong id="result-email">-</strong></div>
+            <div class="result-row"><span>Estado</span><strong id="result-active">-</strong></div>
+            <div class="result-row"><span>Origen</span><strong id="result-origin">-</strong></div>
+            <div class="result-row"><span>Accesos</span><strong id="result-accesses">0</strong></div>
+            <div class="result-row"><span>Registro</span><strong id="result-created">-</strong></div>
+            <div class="result-row"><span>Último acceso</span><strong id="result-last-access">-</strong></div>
+
+            <div class="admin-actions">
+              <button id="deactivate-buyer-btn" class="access-button danger" type="button">Desactivar</button>
+              <button id="reactivate-buyer-btn" class="access-button success" type="button">Reactivar</button>
+            </div>
+          </div>
+        </article>
+      </div>
+      
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="access.js"></script>
+</body>
+</html>
