@@ -10,9 +10,9 @@ const SUPABASE_ANON_KEY = "sb_publishable_NfuR2cIUQYnRHUUlBq8hnA_0kaVS08p";
 // El admin ahora se valida con Supabase Auth + tabla admin_clipmind.
 
 // Cambia estos enlaces cuando tengas los archivos finales en tu hosting.
-const DOWNLOAD_INSTALLER_URL = "./descargas/ClipMindAI_Setup_v1.0.0.exe";
-const DOWNLOAD_MANUAL_URL = "./descargas/Manual_ClipMindAI.pdf";
-const SUPPORT_WHATSAPP_URL = "https://wa.me/51999999999";
+const DOWNLOAD_INSTALLER_URL = "https://github.com/Cesar-Tirado/cm/releases/download/v1.0.0/Instalador_ClipMindAI.exe";
+const DOWNLOAD_MANUAL_URL = "./descargas/Manual ClipMindAI.pdf";
+const SUPPORT_WHATSAPP_URL = "https://wa.me/+51969316448";
 
 const TABLE_BUYERS = "compradores_clipmind";
 const TABLE_ADMINS = "admin_clipmind";
